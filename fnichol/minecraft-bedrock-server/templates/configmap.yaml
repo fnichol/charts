@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "minecraft-bedrock-server.fullname" . }}
+  labels:
+    {{- include "minecraft-bedrock-server.labels" . | nindent 4 }}
+{{ $defaultConfig := dict "EULA" (.Values.eula | ternary "TRUE" "FALSE") "SERVER_NAME" (default .Release.Name .Values.nameOverride) -}}
+{{ $config := merge .Values.config $defaultConfig -}}
+data:
+  {{- toYaml $config | nindent 2 }}

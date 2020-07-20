@@ -50,14 +50,3 @@ Selector labels
 app.kubernetes.io/name: {{ include "minecraft-bedrock-server.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
-
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "minecraft-bedrock-server.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "minecraft-bedrock-server.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
-{{- end }}
