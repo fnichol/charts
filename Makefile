@@ -33,10 +33,12 @@ index: ## Updates the Helm Chart index
 	cr index -c https://fnichol.github.io/charts -i docs/index.yaml
 	git add docs/index.yaml
 	git commit -m 'chore(index): update `docs/index.yaml`'
+	git push origin HEAD
 .PHONY: index
 
 release: ## Publish and release a new version of a Helm Chart
 	@echo "--- $@ ($(CHART))"
 	git push origin HEAD
 	$(MAKE) clean $(CHART) upload index
+	git fetch origin
 .PHONY: release
