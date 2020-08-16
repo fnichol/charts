@@ -2,6 +2,28 @@ apiVersion: v1
 entries:
   minecraft-bedrock-server:
   - apiVersion: v2
+    created: "2020-08-16T14:11:12.833518-06:00"
+    description: |
+      Containerized Minecraft Bedrock Dedicated Server with selectable version
+    digest: 56410870f75a786b1aa563fe9d8849c45611cfc9eb991ee599c3ca1b782e4840
+    home: https://www.minecraft.net/en-us/download/server/bedrock/
+    keywords:
+    - minecraft
+    - bedrock-edition
+    maintainers:
+    - email: fnichol@nichol.ca
+      name: Fletcher Nichol
+      url: https://github.com/fnichol
+    name: minecraft-bedrock-server
+    sources:
+    - https://github.com/itzg/docker-minecraft-bedrock-server
+    - https://github.com/fnichol/charts/blob/master/fnichol/minecraft-bedrock-server
+    - https://github.com/itzg/docker-minecraft-bedrock-server/blob/master/examples/kubernetes.yml
+    - https://minecraft.gamepedia.com/Server.properties#Bedrock_Edition_3
+    urls:
+    - https://github.com/fnichol/charts/releases/download/minecraft-bedrock-server-0.1.2/minecraft-bedrock-server-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2020-08-15T17:18:32.085885-06:00"
     description: |
       Containerized Minecraft Bedrock Dedicated Server with selectable version
