@@ -37,5 +37,6 @@ index: ## Updates the Helm Chart index
 
 release: ## Publish and release a new version of a Helm Chart
 	@echo "--- $@ ($(CHART))"
+	git push origin HEAD
 	$(MAKE) clean $(CHART) upload index
 .PHONY: release
