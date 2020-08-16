@@ -1,6 +1,6 @@
 apiVersion: v2
 name: minecraft-bedrock-server
-version: 0.1.2
+version: 0.1.3
 description: |
   Containerized Minecraft Bedrock Dedicated Server with selectable version
 type: application
